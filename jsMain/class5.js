@@ -49,6 +49,7 @@ person.teaching();
 let totals = person.gratuity(720, 3000);
 console.log("gratuity:", totals);
 
+// class-6
 // Arrays
 let data = ["mango", 34, "berry", false, 20000, undefined, "tomato", null, BigInt];
 console.log("Arrays:",data);
@@ -66,3 +67,68 @@ let slicenegative = data.slice(-3);
 console.log("sliceNegative:",slicenegative);
 let splice = data.splice(3, 1, "pimk", "chocolete");
 console.log("splice:", splice);
+
+// Array.from() -> creats an array from iterable strings.
+let name = "ceguevara";
+let newArr = Array.from(name);
+console.log("Array.from:", newArr);
+
+// find() 
+let score = [23, 34, 45, 56];
+let desired = score.find(x => x > 34);
+console.log("find(desired):", desired);
+
+// sort();
+let sortedNumber = score.sort((a, b)=> a-b);
+console.log(sortedNumber); //ascendingly
+console.log(sortedNumber.reverse()); //descendingly
+
+// critical/advanched -> sort();
+let people = [
+    {name : "bogus", age : 28},
+    {name : "diaping", age : 24},
+    {name : "lottus", age : 18},
+    {name : "trifle", age : 34},
+    {name : "rhina", age : 29}
+];
+people.sort((a, b) => a.age - b.age);
+console.log(people);
+
+// modern javascript array iteration
+// forEach();
+var snacks = ["cheeps", "Cookies", "Chocolate", "bourgious"];
+snacks.forEach(snack => console.log(`Snack: ${snack}`));
+
+// map();
+snacks.map((snack=> console.log(`snack: ${snack}`)));
+
+// from set
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+console.log("roots:", roots);
+
+// filter();
+let filterized = numbers.filter(x => x % 2 !== 0);
+console.log("even/odd:", filterized);
+
+// find(); return math.
+let finder = numbers.find(x => x > 1);
+console.log("firstOne:", finder);
+
+// some(); retuen boolean.
+let some = numbers.some(x => x % 2 === 0);
+console.log("some:", some);
+
+// every(); return boolean.
+let every = numbers.every(x => x > 0);
+console.log("every:", every);
+
+// reduce() return math.
+let reduce = numbers.reduce((acc, value)=> acc + value, 0);
+console.log("reduce:", reduce);
+
+// for...of  how much/many value in an array or others that showes it.
+for (const value of numbers) {
+    console.log("forOf:", value);
+}
+    

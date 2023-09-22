@@ -54,11 +54,11 @@ console.log("2. Max number- among there three:", Math.max(num10, num11, num12));
     }
       
     // Example usage:
-    const character = '7';
+    const character = 'y';
     if (isAlphabetCharacter(character)) {
         console.log(`6. ${character} is the alphabet.`);
     } else {
-        console.log(`6. ${character} is a character.`);
+        console.log(`6. ${character} is a number.`);
     }
 }
 
