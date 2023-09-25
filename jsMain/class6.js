@@ -68,7 +68,7 @@ function isAlphabetCharacter(char) {
 }
 const character = 'k';
 if (isAlphabetCharacter(character)) {
-    console.log(`6. ${character} is the alphabet.`);
+    console.log(`6. ${character} is an alphabet.`);
 } else {
     console.log(`6. ${character} is a number.`);
 }
@@ -183,16 +183,15 @@ function isLeapYear(year){
 }
 isLeapYear(2028);
 
-// 7. the temperature is hot, cold or normal. 
-// 30 >= is hot, 25 <= is cold , any other value is normal.
+// 7. the temperature is hot, cold or normal.30 >= is hot, 25 <= is cold , any other value is normal.
 function weather(temperature){
     if (temperature >= 30) {
-        return ("7. weather is hot!");
+        return ("16. weather is hot!");
     } else if(temperature <= 25){
-        return ("7. weather is cold!");
+        return ("16. weather is cold!");
     }
     else{
-        return ("7. weather is normal.");
+        return ("16. weather is normal.");
     }
 }
 // invoks
@@ -202,9 +201,9 @@ console.log(weather2);
 // 17. a function which returns whether the number is odd or even
 function evenOdd(number){
     if (number % 2 === 0){
-        return ("5. The number is even");
+        return ("17. The number is even");
     } else if(number % 2 !== 0){
-        return ("5. The number is odd");
+        return ("17. The number is odd");
     }
 }
 // invocs
@@ -226,20 +225,22 @@ console.log("19. descending:", ascending.reverse());
 
 //20. Creating an object with two methods;
 let car = {
-    name: "Volvo",
+    brand: "Volvo",
     color: "purple",
     price: 2400 + "$",
-    start: function (){
-        return this.start = "the car is running now";
+    speed: 0,
+    run: function (onVol) {
+        this.speed += onVol;
+        console.log(`20. run to ${this.speed} mph`);
     },
-    drive: function (){
-        return this.drive = "it is driven by mosarrof";
+    brake: function (brakVol) {
+        this.speed -= brakVol;
+        console.log(`20. Braked to ${this.speed} mph`);
     }
 };
-console.log("Object car:");
 console.log(car);
-console.log("20.", car.start());
-console.log("20.", car.drive());
+car.run(20);
+car.brake(10);
 
 // 21. Reverse an given string. Where, - let text = “I love coding” - after reverse a string output will be - ‘gnidoc evol i’;
 function reversString(text){

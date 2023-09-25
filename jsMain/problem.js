@@ -97,3 +97,31 @@ function extractDomainFromEmail(email) {
   const email = "example_truedo56765@example.com";
   const domain = extractDomainFromEmail(email);
   console.log(domain); // This will print "example.com"
+
+//   Problem 7: Mask Email Address
+
+// function maskEmail(maskd){
+//     return maskd;
+// }
+// let eAddress = maskEmail("tinaberry1121@gmail.com");
+
+function maskEmailAddress(email) {
+    // Split the email address at the "@" symbol
+    const parts = email.split('@');
+    console.log(parts);
+  
+    // Get the username and domain parts
+    const username = parts[0];
+    console.log(username);
+    const domain = parts[1];
+    console.log(domain);
+  
+    // Mask the username
+    const maskedUsername = username.substring(0, 3) + '****';
+    // Combine the masked username and the domain
+    const maskedEmail = maskedUsername + '@' + domain;
+    // return maskedEmail;
+  }
+  const emails = 'example@email.com';
+//   const maskedEmail = maskEmailAddress(emails);
+//   console.log(maskedEmail); // Output: exa****@email.com
