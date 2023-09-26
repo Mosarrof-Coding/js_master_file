@@ -19,7 +19,7 @@ function checkPalindrome(string) {
     return 'It is a palindrome';
 }
 // call the function
-const value = checkPalindrome("reviver"); 
+const value = checkPalindrome("reviver");
 // malylam, pop, madam, civic, radar, level, rotor, kayak, refer, redivider, deified and reviver.
 console.log(value);
 
@@ -78,50 +78,55 @@ function findLongestWord(bigWord){
 }
 let bigWord = "javascript can find the longest word of a paragraph or a sentance firstly using the split method of the paragraph or sentance and they were divided into wordize & makes a array by their later if uses the length of this word that count thair longibity";
 let lword = findLongestWord(bigWord);
-console.log(lword);
+console.log("longestWord:", lword);
 
 // Problem 6: Extract Domain from Email Address
 function extractDomainFromEmail(email) {
     // Regular expression to match the domain part of an email address
     const domainRegex = /@(.+)/;
     const match = email.match(domainRegex);
-  
     if (match) {
-      return match[1];
+        return match[1];
     } else {
-      return null; // Return null if no domain is found
+        return null; // Return null if no domain is found
     }
-  }
-  
-  // Example usage:
-  const email = "example_truedo56765@example.com";
-  const domain = extractDomainFromEmail(email);
-  console.log(domain); // This will print "example.com"
+};
+// Example usage:
+const email = "example_truedo56765@example.com";
+const domain = extractDomainFromEmail(email);
+console.log("extractDomain:", domain); // This will print "example.com"
 
-//   Problem 7: Mask Email Address
+// Problem 7: Mask Email Address
+function maskEmail(maskd){
+    return maskd;
+}
+let eAddress = maskEmail("tinaberry1121@gmail.com");
+console.log("emailMask:", eAddress);
 
-// function maskEmail(maskd){
-//     return maskd;
-// }
-// let eAddress = maskEmail("tinaberry1121@gmail.com");
+// Problem 9: Get Words Longer Than N
+function longerThaneN(sentancesM, N){
+    let partialWords = sentancesM.split(" ");
+    // console.log(partialWords);
+    let longerWords = partialWords.filter(word => word.length > N);
+    return longerWords;
+}
+let sentancesM = "i cohesive dilemma forowarding on your harbour two times breefing";
+let N = 6;
+let greterFinder = longerThaneN(sentancesM, N);
+console.log("longerThaneN:", greterFinder);
 
-function maskEmailAddress(email) {
-    // Split the email address at the "@" symbol
-    const parts = email.split('@');
-    console.log(parts);
-  
-    // Get the username and domain parts
-    const username = parts[0];
-    console.log(username);
-    const domain = parts[1];
-    console.log(domain);
-  
-    // Mask the username
-    const maskedUsername = username.substring(0, 3) + '****';
-    // Combine the masked username and the domain
-    const maskedEmail = maskedUsername + '@' + domain;
-    // return maskedEmail;
-  }
-  const emails = 'example@email.com';
-//   const maskedEmail = maskEmailAddress(emails);
-//   console.log(maskedEmail); // Output: exa****@email.com
+// Problem 10: Replace First Occurrence
+function replaceFirstWithSecond(inputString, firstOccurrence, secondOccurrence) {
+    const firstIndex = inputString.indexOf(firstOccurrence);
+    if (firstIndex !== -1) {
+      const firstPart = inputString.substring(0, firstIndex);
+      const secondPart = inputString.substring(firstIndex + firstOccurrence.length);
+      const newString = firstPart + secondOccurrence + secondPart;
+      return newString;
+    }
+    return inputString; // If the first occurrence is not found, return the original string.
+}
+// Example usage:
+const originalString = "Replace the first occurrence with the second occurrence.";
+const modifiedString = replaceFirstWithSecond(originalString, "first", "second");
+console.log(modifiedString); // Output: "Replace the second occurrence with the second occurrence."

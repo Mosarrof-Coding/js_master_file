@@ -6,7 +6,7 @@ function maxNumberTwo(a, b){
     }else{
         console.log("1. maxNum between two: b");
     };
-}
+};
 // invoks/calls
 maxNumberTwo(10, 20);
 
@@ -149,7 +149,7 @@ let toNum = 10;
 while (toNum <= 50) {
     console.log("while loop:", toNum);
     toNum+= 8;
-}
+};
 
 // 12. a for loop which prints values from 20 to 60
 for (let number =20; number <= 60; number+= 8) {
@@ -168,7 +168,7 @@ function forLoop(countStart, countEnd){
     for (let counter = countStart; counter <= countEnd; counter++) {
         console.log("forLoop:", counter);
     }
-}
+};
 // invoke/calls
 forLoop(89, 90);
 forLoop(79, 80);
@@ -180,7 +180,7 @@ function isLeapYear(year){
     }else{
         console.log(`15. ${year} is not a leap year`);
     }
-}
+};
 isLeapYear(2028);
 
 // 7. the temperature is hot, cold or normal.30 >= is hot, 25 <= is cold , any other value is normal.
@@ -254,4 +254,23 @@ let items = ["Apple", "Banana", "Cherry", null, 34, BigInt];
 // Iterate through the array using a for loop
 for (let i = 0; i < items.length; i++) {
   console.log((i + 1), items[i]);
-}
+};
+
+// ternary operator
+function sel(num){
+    let rslt = num ? `num is true` : "num is false";
+    return rslt;
+};
+let rtrn = sel(8);
+console.log("ternaryOp:", rtrn);
+
+// alternative
+let persun = (person)=>{
+    let namme = person ? person : "stranger";
+    return `Person name is ${namme}`;
+};
+let namme = persun("rakib");
+console.log("ternaryOp:", namme);
+
+let ter = 2;
+ter ? console.log("ter true") : console.log("ter false");
