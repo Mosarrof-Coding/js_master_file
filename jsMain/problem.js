@@ -2,7 +2,7 @@
 // revers a string -> string.split("").reverse().join("");
 function reverseString(str){
     return str.split("").reverse().join("");
-}
+};
 console.log(reverseString("lorem ipsum dolor"));
 
 // Problem 2: Check Palindrome
@@ -17,7 +17,7 @@ function checkPalindrome(string) {
         }
     }
     return 'It is a palindrome';
-}
+};
 // call the function
 const value = checkPalindrome("reviver");
 // malylam, pop, madam, civic, radar, level, rotor, kayak, refer, redivider, deified and reviver.
@@ -27,7 +27,7 @@ console.log(value);
 function countVowels(str){
     let Cnumber = str.match(/[aeiou]/gi).length;
     return Cnumber;
-}
+};
 let countV = countVowels("i love bangladesh as well as me");
 console.log(countV);
 
@@ -48,7 +48,7 @@ function capitalizedWords(str){
     // Join the capitalized words to form the final sentence
     let capitalizedSentence = CPword.join(' ');
     return capitalizedSentence;
-}
+};
 let capitalize = capitalizedWords("hi xuvi, i am ok");
 console.log(capitalize);
 
@@ -75,7 +75,7 @@ function findLongestWord(bigWord){
     }
     return longestWord;
     // console.log(longestWord);
-}
+};
 let bigWord = "javascript can find the longest word of a paragraph or a sentance firstly using the split method of the paragraph or sentance and they were divided into wordize & makes a array by their later if uses the length of this word that count thair longibity";
 let lword = findLongestWord(bigWord);
 console.log("longestWord:", lword);
@@ -109,24 +109,21 @@ function longerThaneN(sentancesM, N){
     // console.log(partialWords);
     let longerWords = partialWords.filter(word => word.length > N);
     return longerWords;
-}
+};
 let sentancesM = "i cohesive dilemma forowarding on your harbour two times breefing";
 let N = 6;
 let greterFinder = longerThaneN(sentancesM, N);
 console.log("longerThaneN:", greterFinder);
 
 // Problem 10: Replace First Occurrence
-function replaceFirstWithSecond(inputString, firstOccurrence, secondOccurrence) {
-    const firstIndex = inputString.indexOf(firstOccurrence);
-    if (firstIndex !== -1) {
-      const firstPart = inputString.substring(0, firstIndex);
-      const secondPart = inputString.substring(firstIndex + firstOccurrence.length);
-      const newString = firstPart + secondOccurrence + secondPart;
-      return newString;
+function replaceFirstOccurrence(baseString, firstOccurance, secondOccurance){
+    let convOccurance = baseString.split(" ").indexOf([0]);
+    if (convOccurance === -1){
+        console.log(secondOccurance);
     }
-    return inputString; // If the first occurrence is not found, return the original string.
-}
-// Example usage:
-const originalString = "Replace the first occurrence with the second occurrence.";
-const modifiedString = replaceFirstWithSecond(originalString, "first", "second");
-console.log(modifiedString); // Output: "Replace the second occurrence with the second occurrence."
+};
+let baseString = "Occurance is a utilities that transfar the first to the second one of Occuranceing.";
+let firstOccurance = "Occurance";
+let secondOccurance = "Occuranceing";
+let eventOccurance = replaceFirstOccurrence(baseString, firstOccurance, secondOccurance);
+console.log(eventOccurance);

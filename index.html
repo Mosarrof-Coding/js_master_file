@@ -41,13 +41,65 @@
         </div>
     </section>
 
-    <script src="./jsMain/problem.js"></script>
+    <!-- calculator -->
+    <section id="calculator">
+        <div class="py-8 max-w-[450px] mx-auto bg-cyan-50">
+            <div class="calcBody p-5 mx-5 bg-gray-950 rounded">
+                <div class="calaScrean px-2 bg-gray-50 rounded">
+                    <div class="input">
+                        <input id="inputNum" type="text" placeholder="0" disabled class="bg-gray-50">
+                    </div>
+                    <input type = "text" disabled placeholder="0" class="calaOutput text-5xl max-w-full">
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold px-5 bg-gray-950 text-yellow-400">CASIO</h4>
+                </div>
+                <div class="calcButton flex bg-gray-400 rounded">
+                    <div class="eachBtn basis-[70%] p-3">
+                        <div class="grid grid-cols-12 gap-2">
+                            <button class="btnexecutor btnVlue" onclick="executor('1')">1</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('2')">2</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('3')">3</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('4')">4</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('5')">5</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('6')">6</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('7')">7</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('8')">8</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('9')">9</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('0')">0</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('00')">00</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('.')">.</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('x')">x</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('y')">y</button>
+                            <button class="btnexecutor col-span-6" onclick= "calculateResult()">=</button>
+                        </div>
+                    </div>
+                    <div class="eachBtn basis-[30%] p-3">
+                        <div class="grid grid-cols-2 gap-2">
+                            <button class="mSign col-span-2" onclick="clearDisplay()">Ac</button>
+                            <button class="mSign col-span-2" onclick="del(' ')">c</button>
+                            <button class="mSign" onclick = "executor('+')">+</button>
+                            <button class="mSign" onclick = "executor('-')">-</button>
+                            <button class="mSign" onclick = "executor('*')">*</button>
+                            <button class="mSign" onclick = "executor('/')">/</button>
+                            <button class="mSign" onclick = "executor('%')">%</button>
+                            <button class="mSign" onclick = "executor('**')">^</button>
+                            <button class="mSign"></button>
+                            <button class="mSign"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <script src="./jsMain/problem.js"></script>
     <script src="./jsMain/class1.js"></script>
     <script src="./jsMain/class2.js"></script>
     <script src="./jsMain/class3.js"></script>
     <script src="./jsMain/class4.js"></script>
     <script src="./jsMain/class5.js"></script>
-    <script src="./jsMain/class6.js"></script>
-    <script src="./jsMain/math.js"></script> 
+    <script src="./jsMain/class6.js"></script> -->
+    <script src="./jsMain/math.js"></script>
 </body>
 </html>

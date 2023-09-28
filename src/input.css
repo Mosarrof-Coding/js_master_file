@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    button .active{
+        background-color: #171717;
+    }
+}
+@layer components{
+    .btnexecutor{
+        @apply col-span-3 py-3 bg-gray-500 hover:bg-gray-600 font-semibold text-xl rounded;
+    }
+    .mSign{
+        @apply col-span-1 py-1 bg-gray-500 hover:bg-gray-600 font-semibold text-xl rounded;
+    }
+}
