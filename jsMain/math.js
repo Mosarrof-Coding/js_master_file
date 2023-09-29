@@ -10,19 +10,19 @@ let outputh2 = document.getElementById("outputh2");
 btn1.addEventListener("click", ()=>{
     let total = Math.round(input1.value) + Math.round(input2.value);
     outputh2.innerText = total;
-})
+});
 btn2.addEventListener("click", ()=>{
     let total = Math.round(input1.value) - Math.round(input2.value);
     outputh2.innerText = total;
-})
+});
 btn3.addEventListener("click", ()=>{
     let total = Math.round(input1.value) / Math.round(input2.value);
     outputh2.innerText = total;
-})
+});
 btn4.addEventListener("click", ()=>{
     let total = Math.round(input1.value) * Math.round(input2.value);
     outputh2.innerText = total;
-})
+});
 btn5.addEventListener("click", ()=>{
     let total = Math.round(input1.value) ** Math.round(input2.value);
     outputh2.innerText = total;
@@ -33,14 +33,14 @@ let inputNum = document.querySelector("#inputNum");
 let calaOutput = document.querySelector(".calaOutput");
 function executor(value){
     inputNum.value += value;
-}
+};
 function del(){
-    inputNum.value = "";
-}
+    inputNum.value = inputNum.value.slice(0, -1);
+};
 function clearDisplay(){
     inputNum.value = "";
     calaOutput.value = "";
-}
+};
 function calculateResult(){
     try {
         let dispValue = document.querySelector("#inputNum").value;
@@ -49,4 +49,4 @@ function calculateResult(){
     } catch (error) {
         calaOutput.value = "Error";
     }
-}
+};

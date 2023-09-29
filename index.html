@@ -8,18 +8,6 @@
 </head>
 <body class="px-5">
     <h2 class="text-center text-2xl text-pink-400">Javascript 101</h2>
-    <!-- <h1 class="text-4xl text-purple-600 font-bold text-center leading-normal">Javascript var & Data type:</h1>
-
-    <h2 class="text-center text-2xl">jsClass 2</h2>
-    <h1 class="text-4xl text-purple-600 font-bold text-center leading-normal">Javascript variables & Data type:</h1>
-
-    <h2 class="text-center text-2xl">Assignment 3</h2>
-    <h1 class="text-4xl text-purple-600 font-bold text-center leading-normal">Javascript: math terms, conditions, forloop.</h1>
-
-    <h2 class="text-center text-2xl">Assignment 4</h2>
-    <h1 class="text-4xl text-purple-600 font-bold text-center leading-normal">Javascript: built-in function and using their in condition.</h1> -->
-
-    <!-- <h2 class="text-center text-2xl">Assignment 3</h2> -->
     <h1 class="text-4xl text-purple-600 font-bold text-center leading-normal">Functions, Objects, Arrays & More:</h1>
 
     <section>
@@ -47,12 +35,12 @@
             <div class="calcBody p-5 mx-5 bg-gray-950 rounded">
                 <div class="calaScrean px-2 bg-gray-50 rounded">
                     <div class="input">
-                        <input id="inputNum" type="text" placeholder="0" disabled class="bg-gray-50">
+                        <input id="inputNum" type="text" placeholder="0" disabled class="bg-gray-50 w-full">
                     </div>
                     <input type = "text" disabled placeholder="0" class="calaOutput text-5xl max-w-full">
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold px-5 bg-gray-950 text-yellow-400">CASIO</h4>
+                    <h4 class="text-lg font-semibold px-5 bg-gray-800 text-yellow-400">CASIO</h4>
                 </div>
                 <div class="calcButton flex bg-gray-400 rounded">
                     <div class="eachBtn basis-[70%] p-3">
@@ -68,22 +56,36 @@
                             <button class="btnexecutor btnVlue" onclick="executor('9')">9</button>
                             <button class="btnexecutor btnVlue" onclick="executor('0')">0</button>
                             <button class="btnexecutor btnVlue" onclick="executor('00')">00</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('100')">100</button>
                             <button class="btnexecutor btnVlue" onclick="executor('.')">.</button>
                             <button class="btnexecutor btnVlue" onclick="executor('x')">x</button>
                             <button class="btnexecutor btnVlue" onclick="executor('y')">y</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('(')">(</button>
+                            <button class="btnexecutor btnVlue" onclick="executor(')')">)</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('{')">{</button>
+                            <button class="btnexecutor btnVlue" onclick="executor('}')">}</button>
+                            <button class="btnexecutor btnVlue" onclick="executor(' [ ')">[</button>
+                            <button class="btnexecutor btnVlue" onclick="executor(' ] ')">]</button>
+                            <button class="btnexecutor btnVlue" onclick="executor(' e ')">e</button>
                             <button class="btnexecutor col-span-6" onclick= "calculateResult()">=</button>
                         </div>
                     </div>
                     <div class="eachBtn basis-[30%] p-3">
                         <div class="grid grid-cols-2 gap-2">
                             <button class="mSign col-span-2" onclick="clearDisplay()">Ac</button>
-                            <button class="mSign col-span-2" onclick="del(' ')">c</button>
-                            <button class="mSign" onclick = "executor('+')">+</button>
-                            <button class="mSign" onclick = "executor('-')">-</button>
-                            <button class="mSign" onclick = "executor('*')">*</button>
-                            <button class="mSign" onclick = "executor('/')">/</button>
-                            <button class="mSign" onclick = "executor('%')">%</button>
-                            <button class="mSign" onclick = "executor('**')">^</button>
+                            <button class="mSign col-span-2" onclick="del()">c</button>
+                            <button class="mSign" onclick = "executor(' + ')">+</button>
+                            <button class="mSign" onclick = "executor(' - ')">-</button>
+                            <button class="mSign" onclick = "executor(' * ')">*</button>
+                            <button class="mSign" onclick = "executor(' / ')">/</button>
+                            <button class="mSign" onclick = "executor(' % ' )">%</button>
+                            <button class="mSign" onclick = "executor(' ** ')">^</button>
+                            <button class="mSign" onclick = "executor(' = ')">=</button>
+                            <button class="mSign" onclick = "executor(',')">,</button>
+                            <button class="mSign" onclick = "executor(' ')">_</button>
+                            <button class="mSign" onclick = "executor('?')">?</button>
+                            <button class="mSign" onclick = "executor('$')">$</button>
+                            <button class="mSign" onclick = "executor(' \ ')">\</button>
                             <button class="mSign"></button>
                             <button class="mSign"></button>
                         </div>
@@ -92,6 +94,7 @@
             </div>
         </div>
     </section>
+
 
     <script src="./jsMain/problem.js"></script>
     <script src="./jsMain/class1.js"></script>
