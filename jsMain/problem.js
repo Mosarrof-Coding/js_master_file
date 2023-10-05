@@ -127,3 +127,47 @@ let firstOccurance = "Occurance";
 let secondOccurance = "Occuranceing";
 let eventOccurance = replaceFirstOccurrence(baseString, firstOccurance, secondOccurance);
 console.log(eventOccurance);
+
+// Problem 11: Count Occurrences
+function countOccurrences(myArr, value){
+    let indexIs = myArr.split(" ");
+    // console.log(indexIs);
+    let count = 0;
+    for (let i = 0; i < indexIs.length; i++) {
+        if(indexIs[i] === value){
+            count++;
+        }
+    }
+    return count;
+}
+let mainOccurrence = "when we use the occurrence counter, the occurrence may be more then two occurrence, otherwise the occurencer is not have a occurrencing capability."
+let occurrence = "occurrence";
+let occuranceCaller = countOccurrences(mainOccurrence, occurrence);
+// console.log(occuranceCaller);
+console.log(`The word: ${occurrence}, appears ${occuranceCaller} times.`);
+
+// Problem 12: Extract File Extension
+function getFileExtension(file){
+    let fileName = file.slice(((file.lastIndexOf(".") - 1) >>> 0) + 2);
+    return fileName;
+};
+let file = "swiper.jpg";
+let getExtnsion = getFileExtension(file);
+console.log(getExtnsion);
+
+// Problem 15: Remove a Specific Character from a String
+function removeCahrCharacter(givesString, removeChar){
+    let CharecterArray = givesString.split(removeChar).join("");
+    return CharecterArray;
+}
+let givesString = "redivider";
+let removeChar = "v";
+let SpCharecter = removeCahrCharacter(givesString, removeChar);
+console.log(SpCharecter);
+
+// Problem 16: Extract a Query String Parameter
+function getQueryParam (){
+
+}
+
+let queryString = "https://www.facebok.com/?name=mosh&age=30, 'name";

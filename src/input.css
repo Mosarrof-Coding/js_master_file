@@ -2,12 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .myUl li {
+    padding: 4px;
+    text-transform: capitalize;
+    font-size: 600;
+  }
+  .toLast button {
+    padding: 0 8px 1px 8px;
+    background-color: #9173f1;
+    color: white;
+  }
+}
 
-@layer components{
-    .btnexecutor{
-        @apply col-span-3 py-3 bg-gray-500 hover:bg-gray-600 font-semibold text-xl rounded;
-    }
-    .mSign{
-        @apply col-span-1 py-1 bg-gray-500 hover:bg-gray-600 font-semibold text-xl rounded;
-    }
+@layer components {
+  .btnexecutor {
+    @apply col-span-3 py-3 bg-gray-500 hover:bg-gray-600 font-semibold text-xl rounded;
+  }
+  .mSign {
+    @apply col-span-1 py-1 bg-gray-500 hover:bg-gray-600 font-semibold text-xl rounded;
+  }
+  .contiser {
+    @apply px-2;
+  }
+
+  /* to-do list app  */
+  .contentDiv {
+    @apply flex justify-between items-center gap-2 p-2 mb-2 border border-black;
+  }
+  .contentTask {
+    @apply w-[60%] py-2 pl-2 p-2 bg-transparent capitalize;
+  }
+  .contentBtn {
+    @apply flex gap-2;
+  }
+  .editBtnn {
+    @apply py-1 px-4 bg-blue-600 text-white;
+  }
+  .deleteBtn {
+    @apply py-1 px-3 bg-red-600 text-white;
+  }
 }

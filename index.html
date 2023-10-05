@@ -1,100 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript 101</title>
-    <link rel="stylesheet" href="./dist/output.css">
-</head>
-<body class="px-5">
-    <h2 class="text-center text-2xl text-pink-400">Javascript 101</h2>
-    <h1 class="text-4xl text-purple-600 font-bold text-center leading-normal">Functions, Objects, Arrays & More:</h1>
-
-    <section>
-        <div id="div">
-            <input type="number" placeholder="number 1" id="input1" class="border-pink-300 border">
-            <input type="number" placeholder="number 2" id="input2" class="border-pink-300 border">
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="">
+    <main>
+      <section>
+        <div class="contiser caption text center">
+          <h2 class="text-center text-2xl text-pink-400">Javascript 101</h2>
+          <h1
+            class="text-4xl text-purple-600 font-bold text-center capitalize leading-normal"
+          >
+            assignment: todo app
+          </h1>
         </div>
-        <div>
+      </section>
+
+      <!-- ============ To-Do list App ============ -->
+      <section class="py-8 bg-teal-200 h-screen">
+        <div class="contiser max-w-[560px] mx-auto">
+          <div class="formContainet w-full">
+            <h1 class="text-center text-5xl font-bold capitalize pb-5">
+              todo app
+            </h1>
+            <form id="form" class="mx-auto">
+              <div class="inputGroup flex justify-center gap-4">
+                <input
+                  type="text"
+                  placeholder="add task"
+                  class="AddTaskInput p-2 w-8/12"
+                />
+                <input
+                  type="submit"
+                  value="Add Task"
+                  class="AddTaskBtn pb-[2px] px-5 border border-gray-900"
+                />
+              </div>
+            </form>
+            <h2 class="text-3xl font-semibold capitalize py-4">
+              Edit/Delete tasks
+            </h2>
+            <div class="todoTask bg-cyan-100 py-5">
+              <!-- <div class="contentDiv">
+                <input
+                  type="text"
+                  placeholder="add task here"
+                  class="contentTask w-[60%] py-2 pl-2"
+                />
+                <div class="">
+                  <button class="py-2 px-4 bg-pink-300">Edit</button>
+                  <button class="py-2 px-3 bg-red-600 text-white">
+                    Delete
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--============= basic math =================-->
+      <section class="py-14 bg-purple-200">
+        <div class="contiser">
+          <div id="div">
+            <input
+              type="number"
+              placeholder="number 1"
+              id="input1"
+              class="border-pink-300 border"
+            />
+            <input
+              type="number"
+              placeholder="number 2"
+              id="input2"
+              class="border-pink-300 border"
+            />
+          </div>
+          <div>
             <button type="button" id="btn1" class="border m-2 px-2">Add</button>
-            <button type="button" id="btn2" class="border m-2 px-2">Subtract</button>
-            <button type="button" id="btn3" class="border m-2 px-2">division</button>
-            <button type="button" id="btn4" class="border m-2 px-2">multiplication</button>
-            <button type="button" id="btn5" class="border m-2 px-2">componentiation</button>
-        </div>
-        <div>
-            <div class="output"><span class="font-semibold">Result :</span>
-                <h2 id="outputh2"></h2>
+            <button type="button" id="btn2" class="border m-2 px-2">
+              Subtract
+            </button>
+            <button type="button" id="btn3" class="border m-2 px-2">
+              division
+            </button>
+            <button type="button" id="btn4" class="border m-2 px-2">
+              multiplication
+            </button>
+            <button type="button" id="btn5" class="border m-2 px-2">
+              componentiation
+            </button>
+          </div>
+          <div>
+            <div class="output">
+              <span class="font-semibold">Result :</span>
+              <h2 id="outputh2"></h2>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- calculator -->
-    <section id="calculator">
-        <div class="py-8 max-w-[450px] mx-auto bg-cyan-50">
-            <div class="calcBody p-5 mx-5 bg-gray-950 rounded">
-                <div class="calaScrean px-2 bg-gray-50 rounded">
-                    <div class="input">
-                        <input id="inputNum" type="text" placeholder="0" disabled class="bg-gray-50 w-full">
-                    </div>
-                    <input type = "text" disabled placeholder="0" class="calaOutput text-5xl max-w-full">
+      <!-- ============ Calculator =================-->
+      <section id="calculator" class="py-16">
+        <div class="contiser">
+          <div class="py-8 max-w-[450px] mx-auto">
+            <div class="calcBody p-5 mx-5 bg-gray-950 rounded shadow-lg">
+              <div class="calaScrean px-2 bg-gray-50 rounded">
+                <div class="input">
+                  <input
+                    id="inputNum"
+                    type="text"
+                    placeholder="0"
+                    disabled
+                    class="bg-gray-50 w-full"
+                  />
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold px-5 bg-gray-800 text-yellow-400">CASIO</h4>
+                <input
+                  type="text"
+                  disabled
+                  placeholder="0"
+                  class="calaOutput text-5xl max-w-full"
+                />
+              </div>
+              <div>
+                <h4
+                  class="text-lg font-semibold px-5 bg-gray-800 text-yellow-400"
+                >
+                  CASIO
+                </h4>
+              </div>
+              <div class="calcButton flex bg-gray-400 rounded">
+                <div class="eachBtn basis-[70%] p-3">
+                  <div class="grid grid-cols-12 gap-2">
+                    <button class="btnexecutor btnVlue" onclick="executor('1')">
+                      1
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('2')">
+                      2
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('3')">
+                      3
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('4')">
+                      4
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('5')">
+                      5
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('6')">
+                      6
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('7')">
+                      7
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('8')">
+                      8
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('9')">
+                      9
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('0')">
+                      0
+                    </button>
+                    <button
+                      class="btnexecutor btnVlue"
+                      onclick="executor('00')"
+                    >
+                      00
+                    </button>
+                    <button
+                      class="btnexecutor btnVlue"
+                      onclick="executor('100')"
+                    >
+                      100
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('.')">
+                      .
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('x')">
+                      x
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('y')">
+                      y
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('(')">
+                      (
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor(')')">
+                      )
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('{')">
+                      {
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('}')">
+                      }
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor('[')">
+                      [
+                    </button>
+                    <button class="btnexecutor btnVlue" onclick="executor(']')">
+                      ]
+                    </button>
+                    <button
+                      class="btnexecutor btnVlue"
+                      onclick="executor(' e ')"
+                    >
+                      e
+                    </button>
+                    <button
+                      class="btnexecutor col-span-6"
+                      onclick="calculateResult()"
+                    >
+                      =
+                    </button>
+                  </div>
                 </div>
-                <div class="calcButton flex bg-gray-400 rounded">
-                    <div class="eachBtn basis-[70%] p-3">
-                        <div class="grid grid-cols-12 gap-2">
-                            <button class="btnexecutor btnVlue" onclick="executor('1')">1</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('2')">2</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('3')">3</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('4')">4</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('5')">5</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('6')">6</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('7')">7</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('8')">8</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('9')">9</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('0')">0</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('00')">00</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('100')">100</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('.')">.</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('x')">x</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('y')">y</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('(')">(</button>
-                            <button class="btnexecutor btnVlue" onclick="executor(')')">)</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('{')">{</button>
-                            <button class="btnexecutor btnVlue" onclick="executor('}')">}</button>
-                            <button class="btnexecutor btnVlue" onclick="executor(' [ ')">[</button>
-                            <button class="btnexecutor btnVlue" onclick="executor(' ] ')">]</button>
-                            <button class="btnexecutor btnVlue" onclick="executor(' e ')">e</button>
-                            <button class="btnexecutor col-span-6" onclick= "calculateResult()">=</button>
-                        </div>
-                    </div>
-                    <div class="eachBtn basis-[30%] p-3">
-                        <div class="grid grid-cols-2 gap-2">
-                            <button class="mSign col-span-2" onclick="clearDisplay()">Ac</button>
-                            <button class="mSign col-span-2" onclick="del()">c</button>
-                            <button class="mSign" onclick = "executor(' + ')">+</button>
-                            <button class="mSign" onclick = "executor(' - ')">-</button>
-                            <button class="mSign" onclick = "executor(' * ')">*</button>
-                            <button class="mSign" onclick = "executor(' / ')">/</button>
-                            <button class="mSign" onclick = "executor(' % ' )">%</button>
-                            <button class="mSign" onclick = "executor(' ** ')">^</button>
-                            <button class="mSign" onclick = "executor(' = ')">=</button>
-                            <button class="mSign" onclick = "executor(',')">,</button>
-                            <button class="mSign" onclick = "executor(' ')">_</button>
-                            <button class="mSign" onclick = "executor('?')">?</button>
-                            <button class="mSign" onclick = "executor('$')">$</button>
-                            <button class="mSign" onclick = "executor(' \ ')">\</button>
-                            <button class="mSign"></button>
-                            <button class="mSign"></button>
-                        </div>
-                    </div>
+                <div class="eachBtn basis-[30%] p-3">
+                  <div class="grid grid-cols-2 gap-2">
+                    <button class="mSign col-span-2" onclick="clearDisplay()">
+                      Ac
+                    </button>
+                    <button class="mSign col-span-2" onclick="del()">c</button>
+                    <button class="mSign" onclick="executor(' + ')">+</button>
+                    <button class="mSign" onclick="executor(' - ')">-</button>
+                    <button class="mSign" onclick="executor(' * ')">*</button>
+                    <button class="mSign" onclick="executor(' / ')">/</button>
+                    <button class="mSign" onclick="executor(' % ' )">%</button>
+                    <button class="mSign" onclick="executor(' ** ')">^</button>
+                    <button class="mSign" onclick="executor(' = ')">=</button>
+                    <button class="mSign" onclick="executor(',')">,</button>
+                    <button class="mSign" onclick="executor(' ')">_</button>
+                    <button class="mSign" onclick="executor('?')">?</button>
+                    <button class="mSign" onclick="executor('$')">$</button>
+                    <button class="mSign" onclick="executor(' \ ')">\</button>
+                    <button class="mSign"></button>
+                    <button class="mSign"></button>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
+      <!-- ============ ToDo App ================== -->
+      <section id="toDoApp" class="toDoApp py-12 bg-slate-100">
+        <div class="contiser max-w-[1000px] mx-auto">
+          <div class="app bg-purple-100 py-8">
+            <div class="">
+              <h1 class="uppercase text-5xl font-bold text-center pb-4">
+                to-do app
+              </h1>
+              <form class="form py-4">
+                <div class="inputGroup text-center">
+                  <input
+                    type="text"
+                    placeholder="add task"
+                    class="addInput w-[280px] py-2 px-5"
+                  />
+                  <button
+                    class="AddTask border border-green-500 py-2 px-5"
+                    type="button"
+                  >
+                    Add task
+                  </button>
+                </div>
+              </form>
+              <div
+                class="outputField max-w-[80%] mx-auto grid grid-cols-2 gap-[60px]"
+              >
+                <div class="creatTask bg-purple-400">
+                  <div class="flex justify-between items-center">
+                    <ul class="baseUl myUl list-decimal">
+                      <li>one</li>
+                    </ul>
+                    <div class="toLast flex flex-col gap-1">
+                      <button class="finishdTask">Complit</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="creatTask bg-purple-400">
+                  <div class="flex justify-between items-center">
+                    <ul class="list-decimal finishedUl">
+                      <li>one</li>
+                    </ul>
+                    <div class="toLast flex flex-col gap-1">
+                      <button
+                        class="finishdTask pb-[1px] px-2 bg-red-600 text-white"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="./jsMain/problem.js"></script>
     <script src="./jsMain/class1.js"></script>
@@ -103,6 +310,8 @@
     <script src="./jsMain/class4.js"></script>
     <script src="./jsMain/class5.js"></script>
     <script src="./jsMain/class6.js"></script>
+    <script src="./jsMain/todoApp.js"></script>
+    <script src="./jsMain/todoListApp.js"></script>
     <script src="./jsMain/math.js"></script>
-</body>
+  </body>
 </html>
