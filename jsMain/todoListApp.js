@@ -1,24 +1,25 @@
-const form = document.getElementById("form");
 // add taskInput
-let AddTaskBtn = document.querySelector(".AddTaskBtn");
-let addTask = document.querySelector(".AddTaskInput");
-let todoTask = document.querySelector(".todoTask");
+const form = document.getElementById("form");
+const AddTaskBtn = document.querySelector(".AddTaskBtn");
+const addTask = document.querySelector(".AddTaskInput");
+const todoTask = document.querySelector(".todoTask");
 form.addEventListener("submit", (event) => {
   // prevented from loading
   event.preventDefault();
 
+  // null input value is void -> alert
   if (!addTask.value) {
     alert("please insert value");
     return;
   }
 
   // div creat
-  let contentDiv = document.createElement("div");
+  const contentDiv = document.createElement("div");
   todoTask.appendChild(contentDiv);
   contentDiv.classList.add("contentDiv");
 
   // output field creat
-  let contentTask = document.createElement("input");
+  const contentTask = document.createElement("input");
   contentTask.type = "text";
   contentTask.setAttribute("readonly", "readonly");
   contentTask.classList.add("contentTask");
@@ -26,26 +27,25 @@ form.addEventListener("submit", (event) => {
   contentTask.value = addTask.value;
 
   // btn div
-  let contentBtn = document.createElement("div");
-  contentBtn.classList.add("contentBtn");
-  contentDiv.appendChild(contentBtn);
+  const btnContainer = document.createElement("div");
+  btnContainer.classList.add("contentBtn");
+  contentDiv.appendChild(btnContainer);
 
   // edit btn creat
-  let editBtn = document.createElement("button");
+  const editBtn = document.createElement("button");
   editBtn.classList.add("editBtnn");
-  contentBtn.appendChild(editBtn);
+  btnContainer.appendChild(editBtn);
   editBtn.innerHTML = "Edit";
 
   // delete btn creat
-  let deletebtn = document.createElement("button");
+  const deletebtn = document.createElement("button");
   deletebtn.classList.add("deleteBtn");
-  contentBtn.appendChild(deletebtn);
+  btnContainer.appendChild(deletebtn);
   deletebtn.innerHTML = "Delete";
 
   // edit task
   editBtn.addEventListener("click", function (e) {
     if (editBtn.innerText.toLowerCase() === "edit") {
-      //   console.log("edit button is clicked!");
       contentTask.removeAttribute("readonly");
       editBtn.innerText = "Save";
       contentTask.focus();
@@ -59,4 +59,7 @@ form.addEventListener("submit", (event) => {
   deletebtn.addEventListener("click", function () {
     todoTask.removeChild(contentDiv);
   });
+
+  // refresh every time input value
+  addTask.value = "";
 });
