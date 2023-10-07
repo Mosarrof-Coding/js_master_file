@@ -1,9 +1,9 @@
 // add taskInput
-const form = document.getElementById("form");
+const forms = document.getElementById("form");
 const AddTaskBtn = document.querySelector(".AddTaskBtn");
 const addTask = document.querySelector(".AddTaskInput");
 const todoTask = document.querySelector(".todoTask");
-form.addEventListener("submit", (event) => {
+forms.addEventListener("submit", (event) => {
   // prevented from loading
   event.preventDefault();
 

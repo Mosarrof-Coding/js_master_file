@@ -26,7 +26,7 @@
     @apply px-2;
   }
 
-  /* to-do list app  */
+  /* todo app assignment*/
   .contentDiv {
     @apply flex justify-between items-center gap-2 p-2 mb-2 border border-black;
   }
@@ -41,5 +41,29 @@
   }
   .deleteBtn {
     @apply py-1 px-3 bg-red-600 text-white;
+  }
+
+  /* todoApp my  */
+  .deleteBtn2 {
+    @apply bg-red-600 pb-[1px] px-4;
+  }
+  .leftInput {
+    @apply flex justify-between border border-blue-950 p-1 mb-4;
+  }
+  .edit2 {
+    @apply pb-[1px] px-4 bg-blue-500 text-white;
+  }
+  .EditInputTask {
+    @apply p-1 bg-transparent capitalize;
+  }
+  .lastInputTask {
+    @apply p-1 bg-transparent capitalize;
+  }
+  /* right textDiv  */
+  .rightInput {
+    @apply flex justify-between border border-blue-950 p-1 mb-4;
+  }
+  .delete2 {
+    @apply pb-[1px] px-4 bg-red-500 text-white;
   }
 }
