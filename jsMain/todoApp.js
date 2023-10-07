@@ -23,6 +23,7 @@ form.addEventListener("submit", function (e) {
   // EditInputTask input field
   let leftChildInput = document.createElement("input");
   leftChildInput.type = "text";
+  leftChildInput.setAttribute("readonly", "readonly");
   leftChildInput.classList.add("EditInputTask");
   leftInputDiv.appendChild(leftChildInput);
   leftChildInput.value = addInput.value;
@@ -61,7 +62,6 @@ form.addEventListener("submit", function (e) {
     });
   });
 
+  // refresh adding task every time
   addInput.value = "";
 });
-
-// inCompliteTask

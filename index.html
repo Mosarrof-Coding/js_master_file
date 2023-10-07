@@ -6,20 +6,20 @@
     <title>Javascript 101</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body class="">
-    <main>
-      <!-- heading  -->
-      <section>
-        <div class="contiser caption text center">
-          <h2 class="text-center text-2xl text-pink-400">Javascript 101</h2>
-          <h1
-            class="text-4xl text-purple-600 font-bold text-center capitalize leading-normal"
-          >
-            assignment: todo app
-          </h1>
-        </div>
-      </section>
+  <body>
+    <!-- header  -->
+    <header>
+      <div class="contiser caption text center">
+        <h2 class="text-center text-2xl text-pink-400">Javascript 101</h2>
+        <h1
+          class="text-4xl text-purple-600 font-bold text-center capitalize leading-normal"
+        >
+          assignment: todo app
+        </h1>
+      </div>
+    </header>
 
+    <main>
       <!-- ============ To-Do list App ============ -->
       <section class="py-8 bg-teal-200 h-screen">
         <div class="contiser max-w-[560px] mx-auto">
@@ -273,12 +273,16 @@
                   />
                 </div>
               </form>
-              <div
-                class="contentMain grid grid-cols-2 gap-4 my-12 py-4 bg-purple-100"
-              >
+              <h2 class="text-3xl font-semibold pt-6">Processing Task</h2>
+              <div class="contentMain grid grid-cols-2 gap-4 py-4">
                 <div class="leftContent">
                   <div class="leftInput">
-                    <input type="text" value="default" class="EditInputTask" />
+                    <input
+                      type="text"
+                      value="default"
+                      readonly
+                      class="EditInputTask"
+                    />
                     <button class="edit2">Edit</button>
                   </div>
                 </div>
@@ -296,6 +300,11 @@
 
       <section class="h-screen bg-slate-400"></section>
     </main>
+
+    <!-- footer  -->
+    <footer class="text-center py-12 bg-black text-white">
+      All right Reserved by &#169; Mosarrof Hossain
+    </footer>
 
     <script src="./jsMain/math.js"></script>
     <script src="./jsMain/class1.js"></script>
