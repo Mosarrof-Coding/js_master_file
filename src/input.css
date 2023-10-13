@@ -13,6 +13,9 @@
     background-color: #9173f1;
     color: white;
   }
+  .palse {
+    text-transform: capitalize;
+  }
 }
 
 @layer components {
@@ -65,5 +68,13 @@
   }
   .delete2 {
     @apply pb-[1px] px-4 bg-red-500 text-white;
+  }
+
+  /* =========Cahracter counter app==================== */
+  .palse {
+    @apply animate-pulse bg-blue-300;
+  }
+  .danger {
+    @apply animate-pulse bg-red-600;
   }
 }

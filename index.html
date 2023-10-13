@@ -14,12 +14,48 @@
         <h1
           class="text-4xl text-purple-600 font-bold text-center capitalize leading-normal"
         >
-          assignment: todo app
+          assignment: Word Analytics App
         </h1>
       </div>
     </header>
 
     <main>
+      <!--============= paragrap validation ======= -->
+      <section class="bg-sky-100 py-6 h-screen">
+        <div class="max-w-[800px] mx-auto px-2">
+          <div class="inner flex bg-black px-4 py-1">
+            <div class="bg-blue-50 w-[64%] rounded-lg">
+              <textarea
+                name=""
+                id="textarea"
+                class="w-full h-full p-2 outline-none rounded-lg overflow-y-scroll"
+                placeholder="Write here . . . ✍️"
+              ></textarea>
+            </div>
+            <div class="w-[36%] grid items-center">
+              <div class="text-counter grid grid-cols-2 gap-2">
+                <div class="p-4">
+                  <h2 class="countChar text-3xl text-yellow-100">0</h2>
+                  <h4 class="text-white text-2xl">Charcter</h4>
+                </div>
+                <div class="p-4">
+                  <h2 class="countWord text-3xl text-yellow-100">0</h2>
+                  <h4 class="text-white text-2xl">Word</h4>
+                </div>
+                <div class="p-4">
+                  <h2 class="twitter text-3xl text-yellow-100">500</h2>
+                  <h4 class="text-white text-2xl">Twitter</h4>
+                </div>
+                <div class="p-4">
+                  <h2 class="linkedIn text-3xl text-yellow-100">220</h2>
+                  <h4 class="text-white text-2xl">LinkedIn</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ To-Do list App ============ -->
       <section class="py-8 bg-teal-200 h-screen">
         <div class="contiser max-w-[560px] mx-auto">
@@ -119,7 +155,6 @@
                     id="inputNum"
                     type="text"
                     placeholder="0"
-                    disabled
                     class="bg-gray-50 w-full"
                   />
                 </div>
@@ -283,7 +318,7 @@
                       readonly
                       class="EditInputTask"
                     />
-                    <button class="edit2">Edit</button>
+                    <button class="edit2">Save</button>
                   </div>
                 </div>
                 <div class="rightContent">
@@ -298,12 +333,12 @@
         </div>
       </section>
 
-      <section class="h-screen bg-slate-400"></section>
+      <section class="h-12 bg-slate-400"></section>
     </main>
 
     <!-- footer  -->
-    <footer class="text-center py-12 bg-black text-white">
-      All right Reserved by &#169; Mosarrof Hossain
+    <footer class="text-center py-6 bg-black text-white">
+      &#169; Copyright All right Reserved.Mosarrof Hossain
     </footer>
 
     <script src="./jsMain/math.js"></script>
@@ -316,5 +351,7 @@
     <script src="./jsMain/problem.js"></script>
     <script src="./jsMain/todoListApp.js"></script>
     <script src="./jsMain/todoApp.js"></script>
+    <script src="./jsMain/versatile.js"></script>
+    <script src="./jsMain/characterAp.js"></script>
   </body>
 </html>

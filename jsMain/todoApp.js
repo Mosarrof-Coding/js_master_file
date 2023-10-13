@@ -31,7 +31,7 @@ form.addEventListener("submit", function (e) {
   // edit2 btn creat
   let lftedit2 = document.createElement("button");
   lftedit2.classList.add("edit2");
-  lftedit2.innerText = "Edit";
+  lftedit2.innerText = "Save";
   leftInputDiv.appendChild(lftedit2);
 
   // editBtn clicked
