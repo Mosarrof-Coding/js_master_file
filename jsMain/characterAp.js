@@ -13,9 +13,9 @@ const inputHandler = () => {
   }
   countWord.innerHTML = textarea.value.split(" ").length;
   //twitter reserved charecter
-  let reservedChar = 500 - countChar.innerHTML;
+  let reservedChar = 100 - countChar.innerHTML;
   twitter.innerHTML = reservedChar;
-  if (twitter.innerHTML <= -1) {
+  if (twitter.innerHTML < -1) {
     textarea.classList.add("danger");
     textarea.style.color = "black";
     textarea.setAttribute("readonly", "readonly");
