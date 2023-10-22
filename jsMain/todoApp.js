@@ -1,67 +1,65 @@
-let form = document.querySelector(".form");
-let addInput = document.querySelector(".addInput");
+// add taskInput
+const forms = document.getElementById("form");
+const AddTaskBtn = document.querySelector(".AddTaskBtn");
+const addTask = document.querySelector(".AddTaskInput");
+const todoTask = document.querySelector(".todoTask");
+forms.addEventListener("submit", (event) => {
+  // prevented from loading
+  event.preventDefault();
 
-let leftContent = document.querySelector(".leftContent");
-let leftInput = document.querySelector(".leftInput");
-
-// complitBtn
-form.addEventListener("submit", function (e) {
-  // prevented default from loading
-  e.preventDefault();
-
-  // null value void
-  if (!addInput.value) {
-    alert("Please enter value");
+  // null input value is void -> alert
+  if (!addTask.value) {
+    alert("please insert value");
     return;
   }
 
-  // creat left input
-  let leftInputDiv = document.createElement("div");
-  leftInputDiv.classList.add("leftInput");
-  leftContent.appendChild(leftInputDiv);
+  // div creat
+  const contentDiv = document.createElement("div");
+  todoTask.appendChild(contentDiv);
+  contentDiv.classList.add("contentDiv");
 
-  // EditInputTask input field
-  let leftChildInput = document.createElement("input");
-  leftChildInput.type = "text";
-  leftChildInput.setAttribute("readonly", "readonly");
-  leftChildInput.classList.add("EditInputTask");
-  leftInputDiv.appendChild(leftChildInput);
-  leftChildInput.value = addInput.value;
+  // output field creat
+  const contentTask = document.createElement("input");
+  contentTask.type = "text";
+  contentTask.setAttribute("readonly", "readonly");
+  contentTask.classList.add("contentTask");
+  contentDiv.appendChild(contentTask);
+  contentTask.value = addTask.value;
 
-  // edit2 btn creat
-  let lftedit2 = document.createElement("button");
-  lftedit2.classList.add("edit2");
-  lftedit2.innerText = "Save";
-  leftInputDiv.appendChild(lftedit2);
+  // btn div
+  const btnContainer = document.createElement("div");
+  btnContainer.classList.add("contentBtn");
+  contentDiv.appendChild(btnContainer);
 
-  // editBtn clicked
-  lftedit2.addEventListener("click", function () {
-    let rightContent = document.querySelector(".rightContent");
+  // edit btn creat
+  const editBtn = document.createElement("button");
+  editBtn.classList.add("editBtnn");
+  btnContainer.appendChild(editBtn);
+  editBtn.innerHTML = "Edit";
 
-    // rightInput div
-    let resultDiv = document.createElement("div");
-    resultDiv.classList.add("rightInput");
-    rightContent.appendChild(resultDiv);
+  // delete btn creat
+  const deletebtn = document.createElement("button");
+  deletebtn.classList.add("deleteBtn");
+  btnContainer.appendChild(deletebtn);
+  deletebtn.innerHTML = "Delete";
 
-    // lastInputTask div
-    let lastInputTaskDiv = document.createElement("div");
-    lastInputTaskDiv.classList.add("lastInputTask");
-    resultDiv.appendChild(lastInputTaskDiv);
-    lastInputTaskDiv.innerText = leftChildInput.value;
-
-    // delete btn creat
-    let deleteBtn2 = document.createElement("button");
-    deleteBtn2.classList.add("delete2");
-    deleteBtn2.innerText = "Delete";
-    resultDiv.appendChild(deleteBtn2);
-    leftContent.removeChild(leftInputDiv);
-
-    // last work delete
-    deleteBtn2.addEventListener("click", function () {
-      rightContent.removeChild(resultDiv);
-    });
+  // edit task
+  editBtn.addEventListener("click", function (e) {
+    if (editBtn.innerText.toLowerCase() === "edit") {
+      contentTask.removeAttribute("readonly");
+      editBtn.innerText = "Save";
+      contentTask.focus();
+    } else {
+      editBtn.innerText = "Edit";
+      contentTask.setAttribute("readonly", "readonly");
+    }
   });
 
-  // refresh adding task every time
-  addInput.value = "";
+  //   delete each child
+  deletebtn.addEventListener("click", function () {
+    todoTask.removeChild(contentDiv);
+  });
+
+  // refresh every time input value
+  addTask.value = "";
 });

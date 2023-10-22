@@ -5,12 +5,23 @@ const countWord = document.querySelector(".countWord");
 const twitter = document.querySelector(".twitter");
 const linkedIn = document.querySelector(".linkedIn");
 
+const enumeration = ["peer", ",", ":"];
+
 const inputHandler = () => {
+  // reject invalide charcter
+  enumeration.forEach((numeration) => {
+    if (textarea.value.includes(numeration)) {
+      textarea.value = textarea.value.replace(numeration, "Mosarrof");
+    }
+  });
+  // textarea.value to uppercase
   textarea.style.textTransform = "capitalize";
   countChar.innerHTML = textarea.value.length;
+  // texrarea default index to 0 index
   if (textarea.value.length === 0) {
     countWord.innerHTML = 0;
   }
+  // action
   countWord.innerHTML = textarea.value.split(" ").length;
   //twitter reserved charecter
   let reservedChar = 100 - countChar.innerHTML;
@@ -35,4 +46,5 @@ const inputHandler = () => {
     textarea.style.backgroundColor = "transperant";
   }
 };
+// textArea handler
 textarea.addEventListener("input", inputHandler);

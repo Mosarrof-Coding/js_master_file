@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body>
-    <!-- header  -->
+    <!-- header -->
     <header>
       <div class="contiser caption text center">
         <h2 class="text-center text-2xl text-pink-400">Javascript 101</h2>
@@ -20,9 +20,120 @@
     </header>
 
     <main>
+      <!--=============== local storage =========== -->
+      <section id="localStorage" class="bg-gray-100 py-12">
+        <div class="contiser">
+          <h1 class="text-center text-5xl font-bold capitalize pb-5">
+            local storage
+          </h1>
+          <div
+            class="localMain bg-gray-500 py-12 px-2 max-w-[800px] mx-auto rounded shadow-lg"
+          >
+            <form
+              id="form_controll"
+              class="form_controll max-w-[600px] min-w-[320px] mx-auto"
+            >
+              <div class="search-group">
+                <input
+                  type="text"
+                  placeholder="Add Item"
+                  class="insertInput py-3 px-4 w-[60%]"
+                />
+                <button type="submit" class="py-3 px-4 bg-blue-400 text-white">
+                  Add Item
+                </button>
+              </div>
+            </form>
+            <div class="mainTable">
+              <form class="py-4 max-w-[600px] mx-auto" id="filter">
+                <h4 class="text-2xl font-medium mb-3 mt-2 text-white">
+                  Search your Item
+                </h4>
+                <div
+                  class="search-group w-[77%] min-w-[320px] bg-purple-300 relative"
+                >
+                  <input
+                    type="text"
+                    placeholder="Search Item"
+                    class="inputFilter py-3 px-4 w-full"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="blue"
+                    class="w-8 h-8 absolute right-2 top-1/2 -translate-y-[50%]"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                  </svg>
+                </div>
+              </form>
+              <div class="itemTable max-w-[600px] mx-auto">
+                <h4 class="text-2xl font-medium mb-3 mt-2 text-white">
+                  Item List
+                </h4>
+                <table class="itemlistTable w-[100%] border">
+                  <tr class="border bg-slate-300">
+                    <th class="text-left mb-4 py-2 pl-4">Sl.</th>
+                    <th class="text-left mb-4 py-2 pl-4">Item</th>
+                    <th class="text-left mb-4 py-2 pl-7">Remove</th>
+                  </tr>
+                  <tbody id="tableItem">
+                    <!-- <tr class="storItems text-white">
+                      <td class="pl-5">1</td>
+                      <td class="pl-5 itemText">Tobias</td>
+                      <td class="pl-5">
+                        <button class="deleteBtn bg-red-600 py-1 px-4">
+                          Delete
+                        </button>
+                      </td>
+                    </tr> -->
+                  </tbody>
+                </table>
+                <div class="clearAll pt-4">
+                  <button
+                    class="dltAll bg-red-600 text-white font-semibold py-2 px-8"
+                  >
+                    Delete All
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--================ pageX/Y ================ -->
+      <section id="pages" class="py-12 bg-[#f6bfd2]">
+        <div class="contiser max-w-[1200px] px-2 mx-auto">
+          <h1 class="text-center text-5xl font-bold capitalize pb-5">
+            page-XY
+          </h1>
+          <div class="page_wrapper w-full flex gap-3 justify-center">
+            <div class="pageBox">
+              <div class="page_caption"></div>
+            </div>
+            <div class="pageBox">
+              <div class="page_caption"></div>
+            </div>
+            <div class="pageBox">
+              <div class="page_caption"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--============= paragrap validation ======= -->
-      <section class="bg-sky-100 py-6 h-screen">
+      <section class="bg-sky-100 py-6">
         <div class="max-w-[800px] mx-auto px-2">
+          <h1 class="text-center text-5xl font-bold capitalize pb-5">
+            word counter
+          </h1>
           <div class="inner flex bg-black px-4 py-1">
             <div class="bg-blue-50 w-[64%] rounded-lg">
               <textarea
@@ -57,7 +168,7 @@
       </section>
 
       <!-- ============ To-Do list App ============ -->
-      <section class="py-8 bg-teal-200 h-screen">
+      <section class="py-8 bg-teal-200">
         <div class="contiser max-w-[560px] mx-auto">
           <div class="formContainet w-full">
             <h1 class="text-center text-5xl font-bold capitalize pb-5">
@@ -338,10 +449,11 @@
 
     <!-- footer  -->
     <footer class="text-center py-6 bg-black text-white">
-      &#169; Copyright All right Reserved.Mosarrof Hossain
+      Copyright All right Reserved &#169; Mosarrof Hossain
     </footer>
 
-    <script src="./jsMain/math.js"></script>
+    <!-- <script src="./jsMain/math.js"></script>
+    <script src="./jsMain/pageX.js"></script>
     <script src="./jsMain/class1.js"></script>
     <script src="./jsMain/class2.js"></script>
     <script src="./jsMain/class3.js"></script>
@@ -349,9 +461,10 @@
     <script src="./jsMain/class5.js"></script>
     <script src="./jsMain/class6.js"></script>
     <script src="./jsMain/problem.js"></script>
-    <script src="./jsMain/todoListApp.js"></script>
     <script src="./jsMain/todoApp.js"></script>
+    <script src="./jsMain/todoApp2.js"></script>
     <script src="./jsMain/versatile.js"></script>
-    <script src="./jsMain/characterAp.js"></script>
+    <script src="./jsMain/characterAp.js"></script> -->
+    <script src="./jsMain/storage.js"></script>
   </body>
 </html>

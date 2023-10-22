@@ -16,6 +16,18 @@
   .palse {
     text-transform: capitalize;
   }
+  .pageBox {
+    width: 220px;
+    height: 200px;
+    background-color: #dc33b7;
+    position: relative;
+  }
+  .page_caption {
+    width: 40px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+  }
 }
 
 @layer components {
