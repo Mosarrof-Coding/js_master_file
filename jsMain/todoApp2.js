@@ -1,11 +1,11 @@
-let form = document.querySelector(".form");
+let formm = document.querySelector(".form");
 let addInput = document.querySelector(".addInput");
 
 let leftContent = document.querySelector(".leftContent");
 let leftInput = document.querySelector(".leftInput");
 
 // complitBtn
-form.addEventListener("submit", function (e) {
+formm.addEventListener("submit", function (e) {
   // prevented default from loading
   e.preventDefault();
 

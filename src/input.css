@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   .myUl li {
     padding: 4px;
     text-transform: capitalize;
@@ -27,6 +32,45 @@
     height: 20px;
     background-color: #fff;
     position: absolute;
+  }
+  /* api  */
+  .apiCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 18px;
+  }
+  .apiCont1 {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 18px;
+  }
+  .apiCont2 {
+    padding-top: 10px;
+  }
+  .apiCont3 {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 18px;
+  }
+  .apiDiv {
+    max-width: 24%;
+    min-width: 320px;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.38);
+    transition: all linear 0.3s;
+  }
+  .apiDiv:hover {
+    box-shadow: rgba(128, 128, 128, 0.58) 0px 29px 26px 2px;
+    transform: translateY(20px) scale(1.2) perspective(600px) rotateX(25deg);
+    border: 1px solid rgba(128, 128, 128, 0.136);
+    border-bottom: 4px solid rgba(128, 128, 128, 0.38);
   }
 }
 

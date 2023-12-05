@@ -1,7 +1,16 @@
-let pageBox = document.querySelector(".pageBox");
-let page_caption = document.querySelector(".page_caption");
+let pageBox = document.querySelectorAll(".pageBox");
+let pageCaption = document.querySelectorAll(".page_caption");
 
-pageBox.addEventListener("mousemove", (e) => {
-  page_caption.style.left = e.pageX + "px";
-  page_caption.style.top = e.pageY + "px";
+pageBox.forEach((box, bxIndex) => {
+  box.addEventListener("mousemove", function (e) {
+    let pageCaptionToParent = pageCaption[bxIndex].parentElement;
+    let pageCaptionArr = Array.from(
+      pageCaptionToParent.querySelectorAll(".page_caption")
+    );
+    pageCaptionArr.map((item) => {
+      item.style.display = "block";
+      item.style.left = e.pageX + "px";
+      item.style.top = e.pageY + "px";
+    });
+  });
 });
